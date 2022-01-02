@@ -21,11 +21,27 @@ let mainHeight = clientHeight.value + 'px'
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  color: #303133;
 }
 body {
   margin: 0;
+}
+.text-regular {
+  color: #606266;
+  font-size: 16px;
+}
+.text-secondary {
+  color: #909399;
+  font-size: 14px;
+}
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+.cur-pointer {
+  cursor: pointer;
 }
 </style>
 
