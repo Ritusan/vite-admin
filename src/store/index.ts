@@ -2,7 +2,8 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    test:1
+    test:1,
+    sidebarIsCollapse: false
   },
   getters:{
     getTest(state){

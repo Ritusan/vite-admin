@@ -1,16 +1,22 @@
 <template>
   <div class="main-wrapper">
-    <router-view></router-view>
+    <el-container>
+      <side-bar></side-bar>
+      <el-container class="flex-col">
+        <top-bar></top-bar>
+        <el-main>
+          <router-view></router-view>
+        </el-main>
+      </el-container>
+    </el-container>
   </div>
-  
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
 
 const clientHeight = ref(0)
-
-clientHeight.value = document.documentElement.clientHeight - 60 - 40
+clientHeight.value = document.documentElement.clientHeight
 
 let mainHeight = clientHeight.value + 'px'
 
@@ -43,11 +49,27 @@ body {
 .cur-pointer {
   cursor: pointer;
 }
+.el-header {
+  background-color: #bad4ee;
+  color: var(--el-text-color-primary);
+  line-height: 60px;
+  font-size: 16px;
+}
+
+.el-aside {
+  color: var(--el-text-color-primary);
+}
 </style>
 
 <style lang="scss" scoped>
 .main-wrapper {
-  padding: 20px 20px 10px 20px;
-  min-height: v-bind('mainHeight');
+  // padding: 20px 20px 10px 20px;
+  height: v-bind('mainHeight');
+}
+:deep(.el-container) {
+  height: 100%;
+}
+:deep(.el-main) {
+  padding: 10px 20px 10px;
 }
 </style>

@@ -5,56 +5,63 @@ interface GroupItem {
   desc: string
   date: string
   group: string
+  url: string
 }
 
 export const groupItems: GroupItem[] = [
   {
-    title: 'Flower',
-    icon: 'mdi:flower',
-    color: '#e098ba',
-    desc: '跟我一起去认识生活中的五彩。',
+    title: 'Vue',
+    icon: 'logos:vue',
+    color: '',
+    desc: 'Vue3 handbook',
     group: 'winter',
     date: '2022-01-02',
+    url: 'https://v3.cn.vuejs.org/'
   },
   {
-    title: 'Music',
-    icon: 'clarity:music-note-solid',
+    title: 'Vite',
+    icon: 'logos:vitejs',
     color: '#c59abf',
-    desc: '你说你喜欢猫，我带你去猫咖。',
+    desc: 'Vite doc',
     group: 'winter',
     date: '2022-01-02',
+    url: 'https://vitejs.cn/'
   },
   {
-    title: 'Mood',
-    icon: 'noto-v1:sunflower',
+    title: 'TypeScript',
+    icon: 'logos:typescript-icon',
     color: '#e18525',
-    desc: '这世界有很多的美好等待你去探索。',
+    desc: 'TypeScript doc',
     group: 'winter',
     date: '2022-01-02',
+    url: 'https://www.typescriptlang.org/'
   },
   {
-    title: 'Weather',
-    icon: 'bi:sun-fill',
-    color: '#f7ca11',
-    desc: '不如跟我走，带你去兜风。',
+    title: 'github',
+    icon: 'bi:github',
+    color: '',
+    desc: '项目升级~',
+    group: '进行中',
+    date: '2022-01-02',
+    url: 'https://github.com/'
+  },
+  {
+    title: 'React',
+    icon: 'logos:react',
+    color: '',
+    desc: 'React handbook',
     group: 'winter',
     date: '2022-01-02',
+    url: 'https://zh-hans.reactjs.org/'
   },
   {
-    title: 'Photo',
-    icon: 'emojione:camera-with-flash',
-    color: '#c59abf',
-    desc: '我摘下星星⭐️为你营业。',
-    group: 'winter',
-    date: '2022-01-02',
-  },
-  {
-    title: 'Seasons',
-    icon: 'bi:snow',
+    title: 'Element',
+    icon: 'logos:element',
     color: '#81a0d3',
-    desc: '你所有心愿，他都能实现。',
+    desc: 'Element-plus',
     group: 'winter',
     date: '2022-01-02',
+    url: 'https://element-plus.gitee.io/zh-CN/component/button.html'
   },
 ]
 

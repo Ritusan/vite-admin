@@ -5,6 +5,8 @@ const home = () => import('../pages/Home.vue')
 const login = () => import('../pages/Login.vue')
 const todolist = () => import('../pages/todolist/index.vue')
 const favorites = () => import('../pages/favorites/index.vue')
+const frame = () => import('../pages/frame/index.vue')
+const colors = () => import('../pages/colors/index.vue')
 
 const routes: Array<RouteRecordRaw> = [
   { path: '/', redirect: '/dashboard' },
@@ -33,6 +35,16 @@ const routes: Array<RouteRecordRaw> = [
     name: 'favorites',
     component: favorites,
   },
+  {
+    path: '/frame',
+    name: 'frame',
+    component: frame,
+  },
+  {
+    path: '/colors',
+    name: 'colors',
+    component: colors,
+  }
 ]
 
 const router = createRouter({

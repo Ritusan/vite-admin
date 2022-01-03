@@ -1,6 +1,10 @@
 <template>
   <div class="todolist">
-    <header>TodoList</header>
+    <div class="flex items-center justify-between">
+      <header>TodoList</header>
+      <el-button @click="goBack">返回</el-button>
+      <router-link to="/dashboard">首页</router-link>
+    </div>
     <section>
       <el-checkbox-group v-model="checkList">
         <el-checkbox label="Option A" />
@@ -43,6 +47,7 @@
 
 <script setup lang="ts">
 import { reactive, ref } from 'vue'
+import { useRouter } from 'vue-router'
 
 const clientHeight = ref(0)
 
@@ -73,10 +78,16 @@ const handleAddTodo = () => {
   todoList.push(obj)
 }
 
+const router = useRouter()
+
+const goBack = () => {
+  router.back()
+}
 </script>
 
 <style scoped lang="scss">
 .todolist {
+  padding: 10px 0;
   .check-list {
 
   }

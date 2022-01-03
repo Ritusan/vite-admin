@@ -7,9 +7,9 @@
       </div>
     </template>
     <div v-for="(item, index) in groupItems" :key="index" class="group-item">
-      <div class="flex items-center">
+      <div class="flex items-center cursor-pointer" @click="gotoDetail(item.url)">
         <!-- <el-icon :size='20' :color="item.color"><component :is="item.icon"></component></el-icon> -->
-        <span class="iconify" :data-icon="item.icon" data-width="30" :style="{color: item.color}"></span>
+        <span class="iconify" :data-icon="item.icon" data-width="24" :style="{color: item.color}"></span>
         <span class="text-lg ml-2">{{ item.title }}</span>
       </div>
       <div class="text-regular">
@@ -25,6 +25,10 @@
 
 <script setup lang="ts">
 import { groupItems } from './data'
+
+const gotoDetail = (url: string) => {
+  window.open(url)
+}
 </script>
 
 <style lang="scss" scoped>
@@ -65,5 +69,6 @@ import { groupItems } from './data'
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  // flex-direction: column;
 }
 </style>
