@@ -69,6 +69,7 @@ interface NavItem {
   title: string
   icon: string
   color: string
+  url: string
 }
 
 export const navItems: NavItem[] = [
@@ -76,30 +77,36 @@ export const navItems: NavItem[] = [
     title: '首页',
     icon: 'HomeFilled',
     color: '#b0b7d6',
+    url: '/'
   },
   {
     title: '仪表盘',
     icon: 'Menu',
     color: '#bad4ee',
+    url: '/'
   },
   {
     title: '组件',
     icon: 'Coin',
     color: '#f4b095',
+    url: '/examples'
   },
   {
     title: '系统管理',
     icon: 'Setting',
     color: '#adcab0',
+    url: '/'
   },
   {
     title: '日程表',
     icon: 'Calendar',
     color: '#f7c6bd',
+    url: '/calendar'
   },
   {
     title: '图表',
     icon: 'TrendCharts',
     color: '#c3b3cf',
+    url: '/chart'
   },
 ]

@@ -4,9 +4,13 @@
       :collapse="isCollapse" @open="handleOpen" @close="handleClose" 
       @select="selectItem"
       :collapse-transition="false">
+      <el-menu-item index="0">
+        <el-icon><coffee-cup /></el-icon>
+        <template #title>首页</template>
+      </el-menu-item>
       <el-sub-menu index="1">
         <template #title>
-          <el-icon><location /></el-icon>
+          <el-icon><magic-stick /></el-icon>
           <span>工作台</span>
         </template>
         <el-menu-item-group>
@@ -27,12 +31,40 @@
         <template #title>Colors</template>
       </el-menu-item>
       <el-menu-item index="3">
-        <el-icon><document /></el-icon>
+        <el-icon><finished /></el-icon>
         <template #title>TodoList</template>
       </el-menu-item>
       <el-menu-item index="4">
-        <el-icon><setting /></el-icon>
-        <template #title>Navigator Four</template>
+        <el-icon><coin /></el-icon>
+        <template #title>组件实例</template>
+      </el-menu-item>
+      <el-menu-item index="5">
+        <el-icon><pie-chart /></el-icon>
+        <template #title>图表</template>
+      </el-menu-item>
+      <el-menu-item index="6">
+        <el-icon><calendar /></el-icon>
+        <template #title>日程表</template>
+      </el-menu-item>
+      <el-menu-item index="7">
+        <el-icon><edit /></el-icon>
+        <template #title>写作</template>
+      </el-menu-item>
+      <el-menu-item index="8">
+        <el-icon><bell /></el-icon>
+        <template #title>消息通知</template>
+      </el-menu-item>
+      <el-menu-item index="9">
+        <el-icon><moon-night /></el-icon>
+        <template #title>天气</template>
+      </el-menu-item>
+      <el-menu-item index="10">
+        <el-icon><flag /></el-icon>
+        <template #title>Flag</template>
+      </el-menu-item>
+      <el-menu-item index="15">
+        <el-icon><search /></el-icon>
+        <template #title>外部页面</template>
       </el-menu-item>
     </el-menu>
   </el-aside>
@@ -53,16 +85,42 @@ const handleClose = (key: string, keyPath: string[]) => {
 
 const router = useRouter()
 const selectItem = (val: string) => {
-  console.log(val)
   switch (val) {
+    case '0':
+      router.push('/')
+    break
     case '2':
       router.push('/colors')
       break
     case '3':
       router.push('/todolist')
     break
+    case '4':
+      router.push('/examples')
+    break
+    case '5':
+      router.push('/chart')
+    break
+    case '6':
+      router.push('/calendar')
+    break
+    case '7':
+      router.push('/write')
+    break
+    case '8':
+      router.push('/notice')
+    break
+    case '9':
+      router.push('/weather')
+    break
+    case '10':
+      router.push('/flag')
+    break
+    case '15':
+      router.push('/frame')
+    break
     default:
-      router.push('/colors')
+      router.push('/')
     break
   }
 }

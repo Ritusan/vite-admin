@@ -6,8 +6,8 @@
         <el-button class="button" type="text">更多</el-button>
       </div>
     </template>
-    <div v-for="(item, index) in groupItems" :key="index" class="group-item">
-      <div class="flex items-center cursor-pointer" @click="gotoDetail(item.url)">
+    <div v-for="(item, index) in groupItems" :key="index" class="group-item cursor-pointer" @click="gotoDetail(item.url)">
+      <div class="flex items-center">
         <!-- <el-icon :size='20' :color="item.color"><component :is="item.icon"></component></el-icon> -->
         <span class="iconify" :data-icon="item.icon" data-width="24" :style="{color: item.color}"></span>
         <span class="text-lg ml-2">{{ item.title }}</span>

@@ -1,26 +1,27 @@
 <template>
-  <div class="my-iframe">
-    <iframe :src="frameSrc" ref="frameRef" @load="hideLoading"></iframe>
-  </div>
+  <iframe ref="frameRef" @load="hideLoading" :src="frameSrc"></iframe>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-
+import { nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+const frameRef = ref<HTMLIFrameElement>()
 const frameSrc = ref('https://element-plus.gitee.io/zh-CN/component/timeline.html')
 
-const hideLoading = () => {
-  console.log()
+let iframeShow = ref(true)
+
+const route = useRoute()
+
+const loading = ref(true)
+const hideLoading = (e: any) => {
+  loading.value = false
+  window.history.back()
 }
 </script>
 
 <style scoped lang="scss">
-.my-iframe {
+iframe {
   width: 100%;
   height: 100%;
-  iframe {
-    width: 100%;
-    height: 100%;
-  }
 }
 </style>

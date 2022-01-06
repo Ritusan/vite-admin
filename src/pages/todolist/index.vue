@@ -46,8 +46,8 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { reactive, ref, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 
 const clientHeight = ref(0)
 
@@ -83,6 +83,10 @@ const router = useRouter()
 const goBack = () => {
   router.back()
 }
+const route = useRoute()
+watch(() => route.path,(newVal) => {
+  console.log(newVal)
+},{ deep: true,immediate:true })
 </script>
 
 <style scoped lang="scss">

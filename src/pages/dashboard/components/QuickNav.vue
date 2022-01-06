@@ -6,7 +6,7 @@
         <el-button class="button" type="text">更多</el-button>
       </div>
     </template>
-    <div v-for="(item, index) in navItems" :key="index" class="nav-item">
+    <div v-for="(item, index) in navItems" :key="index" class="nav-item cursor-pointer"  @click="gotoDetail(item.url)">
       <div class="flex flex-col items-center">
         <!-- <span>{{ item.icon }}</span> -->
         <el-icon :size='20' :color="item.color"><component :is="item.icon"></component></el-icon>
@@ -18,6 +18,12 @@
 
 <script setup lang="ts">
 import { navItems } from './data'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+const gotoDetail = (url: string) => {
+  router.push(url)
+}
 </script>
 
 <style scoped lang="scss">

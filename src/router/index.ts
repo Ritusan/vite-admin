@@ -7,6 +7,13 @@ const todolist = () => import('../pages/todolist/index.vue')
 const favorites = () => import('../pages/favorites/index.vue')
 const frame = () => import('../pages/frame/index.vue')
 const colors = () => import('../pages/colors/index.vue')
+const examples = () => import('../pages/examples/index.vue')
+const chart = () => import('../pages/chart/index.vue')
+const calendar = () => import('../pages/calendar/index.vue')
+const write = () => import('../pages/write/index.vue')
+const notice = () => import('../pages/notice/index.vue')
+const weather = () => import('../pages/weather/index.vue')
+const flag = () => import('../pages/flag/index.vue')
 
 const routes: Array<RouteRecordRaw> = [
   { path: '/', redirect: '/dashboard' },
@@ -44,7 +51,42 @@ const routes: Array<RouteRecordRaw> = [
     path: '/colors',
     name: 'colors',
     component: colors,
-  }
+  },
+  {
+    path: '/examples',
+    name: 'examples',
+    component: examples,
+  },
+  {
+    path: '/chart',
+    name: 'chart',
+    component: chart,
+  },
+  {
+    path: '/calendar',
+    name: 'calendar',
+    component: calendar,
+  },
+  {
+    path: '/write',
+    name: 'write',
+    component: write,
+  },
+  {
+    path: '/notice',
+    name: 'notice',
+    component: notice,
+  },
+  {
+    path: '/weather',
+    name: 'weather',
+    component: weather,
+  },
+  {
+    path: '/flag',
+    name: 'flag',
+    component: flag,
+  },
 ]
 
 const router = createRouter({
