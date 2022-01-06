@@ -1,9 +1,6 @@
 <template>
   <el-aside style="background-color: rgb(238, 241, 246)" class="my-aside">
-    <el-menu default-active="2" class="my-menu" 
-      :collapse="isCollapse" @open="handleOpen" @close="handleClose" 
-      @select="selectItem"
-      :collapse-transition="false">
+    <el-menu default-active="2" class="my-menu" :collapse="isCollapse" @open="handleOpen" @close="handleClose" @select="selectItem" :collapse-transition="false">
       <el-menu-item index="0">
         <el-icon><coffee-cup /></el-icon>
         <template #title>首页</template>
@@ -72,7 +69,7 @@
 
 <script lang="ts" setup>
 import { ref, watch } from 'vue'
-import { Location, Document, Menu as IconMenu, Setting } from '@element-plus/icons-vue'
+import { Location, Document, Menu as IconMenu, Setting, CoffeeCup, MagicStick, Finished, Coin, PieChart, Calendar, Edit, Bell, MoonNight, Flag, Search } from '@element-plus/icons-vue'
 import { useRouter } from 'vue-router'
 import { useStore } from 'vuex'
 
@@ -88,40 +85,40 @@ const selectItem = (val: string) => {
   switch (val) {
     case '0':
       router.push('/')
-    break
+      break
     case '2':
       router.push('/colors')
       break
     case '3':
       router.push('/todolist')
-    break
+      break
     case '4':
       router.push('/examples')
-    break
+      break
     case '5':
       router.push('/chart')
-    break
+      break
     case '6':
       router.push('/calendar')
-    break
+      break
     case '7':
       router.push('/write')
-    break
+      break
     case '8':
       router.push('/notice')
-    break
+      break
     case '9':
       router.push('/weather')
-    break
+      break
     case '10':
       router.push('/flag')
-    break
+      break
     case '15':
       router.push('/frame')
-    break
+      break
     default:
       router.push('/')
-    break
+      break
   }
 }
 
@@ -132,9 +129,9 @@ watch(
   () => store.state.sidebarIsCollapse,
   (val) => {
     isCollapse.value = val
-    if(val) {
+    if (val) {
       sidebarWidth.value = '60px'
-    }else {
+    } else {
       sidebarWidth.value = '200px'
     }
   }
