@@ -9,8 +9,12 @@
   "dependencies": {
     "@element-plus/icons-vue": "^0.2.4",
     "@iconify/iconify": "^2.1.0",
+    "@soerenmartius/vue3-clipboard": "^0.1.2",
+    "@types/clipboard": "^2.0.7",
+    "clipboard": "^2.0.8",
     "element-plus": "^1.3.0-beta.1",
     "vue": "^3.2.25",
+    "vue-clipboard3": "^1.0.1",
     "vue-router": "^4.0.12",
     "vuex": "^4.0.2"
   },

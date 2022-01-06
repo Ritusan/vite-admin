@@ -7,6 +7,10 @@ const todolist = () => import('../pages/todolist/index.vue')
 const favorites = () => import('../pages/favorites/index.vue')
 const frame = () => import('../pages/frame/index.vue')
 const colors = () => import('../pages/colors/index.vue')
+const SpringColors = () => import('../pages/colors/SpringColors.vue')
+const SummerColors = () => import('../pages/colors/SummerColors.vue')
+const AutumnColors = () => import('../pages/colors/AutumnColors.vue')
+const WinterColors = () => import('../pages/colors/WinterColors.vue')
 const examples = () => import('../pages/examples/index.vue')
 const chart = () => import('../pages/chart/index.vue')
 const calendar = () => import('../pages/calendar/index.vue')
@@ -51,6 +55,26 @@ const routes: Array<RouteRecordRaw> = [
     path: '/colors',
     name: 'colors',
     component: colors,
+  },
+  {
+    path: '/colors/SpringColors',
+    name: 'SpringColors',
+    component: SpringColors,
+  },
+  {
+    path: '/colors/SummerColors',
+    name: 'SummerColors',
+    component: SummerColors,
+  },
+  {
+    path: '/colors/AutumnColors',
+    name: 'AutumnColors',
+    component: AutumnColors,
+  },
+  {
+    path: '/colors/WinterColors',
+    name: 'WinterColors',
+    component: WinterColors,
   },
   {
     path: '/examples',

@@ -23,10 +23,19 @@
           <el-menu-item index="1-4-1">item one</el-menu-item>
         </el-sub-menu>
       </el-sub-menu>
-      <el-menu-item index="2">
-        <el-icon><icon-menu /></el-icon>
-        <template #title>Colors</template>
-      </el-menu-item>
+      <el-sub-menu index="2">
+        <template #title>
+          <el-icon><icon-menu /></el-icon>
+          <span>Colors</span>
+        </template>
+        <el-menu-item-group>
+          <!-- <template #title><span>Spring</span></template> -->
+          <el-menu-item index="2-1">Spring colors</el-menu-item>
+          <el-menu-item index="2-2">Summer colors</el-menu-item>
+          <el-menu-item index="2-3">Autumn colors</el-menu-item>
+          <el-menu-item index="2-4">Winter colors</el-menu-item>
+        </el-menu-item-group>
+      </el-sub-menu>
       <el-menu-item index="3">
         <el-icon><finished /></el-icon>
         <template #title>TodoList</template>
@@ -89,6 +98,18 @@ const selectItem = (val: string) => {
     case '2':
       router.push('/colors')
       break
+    case '2-1':
+      router.push('/colors/SpringColors')
+    break
+    case '2-2':
+      router.push('/colors/SummerColors')
+    break
+    case '2-3':
+      router.push('/colors/AutumnColors')
+    break
+    case '2-4':
+      router.push('/colors/WinterColors')
+    break
     case '3':
       router.push('/todolist')
       break
