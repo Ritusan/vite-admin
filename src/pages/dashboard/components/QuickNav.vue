@@ -6,10 +6,15 @@
         <el-button class="button" type="text">更多</el-button>
       </div>
     </template>
-    <div v-for="(item, index) in navItems" :key="index" class="nav-item cursor-pointer"  @click="gotoDetail(item.url)">
+    <div
+      v-for="(item, index) in navItems"
+      :key="index"
+      class="nav-item cursor-pointer"
+      @click="gotoDetail(item.url)"
+    >
       <div class="flex flex-col items-center">
         <!-- <span>{{ item.icon }}</span> -->
-        <el-icon :size='20' :color="item.color"><component :is="item.icon"></component></el-icon>
+        <el-icon :size="20" :color="item.color"><component :is="item.icon"></component></el-icon>
         <span class="text-md mt-2">{{ item.title }}</span>
       </div>
     </div>
@@ -37,7 +42,8 @@ const gotoDetail = (url: string) => {
 }
 .nav-item {
   padding: 20px;
-  box-shadow: 1px 0 0 0 #f0f0f0, 0 1px 0 0 #f0f0f0, 1px 1px 0 0 #f0f0f0, 1px 0 0 0 #f0f0f0 inset, 0 1px 0 0 #f0f0f0 inset;
+  box-shadow: 1px 0 0 0 #f0f0f0, 0 1px 0 0 #f0f0f0, 1px 1px 0 0 #f0f0f0, 1px 0 0 0 #f0f0f0 inset,
+    0 1px 0 0 #f0f0f0 inset;
   transition: all 0.3s;
   box-sizing: border-box;
   flex-basis: 33.33333%;

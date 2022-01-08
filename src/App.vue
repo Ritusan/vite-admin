@@ -5,7 +5,7 @@
       <el-container class="flex-col">
         <top-bar></top-bar>
         <el-main>
-          <router-view></router-view>
+          <router-view style="padding:20px"></router-view>
         </el-main>
       </el-container>
     </el-container>
@@ -50,10 +50,11 @@ body {
   cursor: pointer;
 }
 .el-header {
-  background-color: #bad4ee;
+  /* background-color: #bad4ee; */
   color: var(--el-text-color-primary);
   line-height: 60px;
   font-size: 16px;
+  border-bottom: 1px solid var(--el-border-color-base);
 }
 
 .el-aside {
@@ -70,6 +71,7 @@ body {
   height: 100%;
 }
 :deep(.el-main) {
-  padding: 10px 20px 10px;
+  // padding: 10px 20px 10px;
+  padding: 0;
 }
 </style>

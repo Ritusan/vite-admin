@@ -6,10 +6,20 @@
         <el-button class="button" type="text">更多</el-button>
       </div>
     </template>
-    <div v-for="(item, index) in groupItems" :key="index" class="group-item cursor-pointer" @click="gotoDetail(item.url)">
+    <div
+      v-for="(item, index) in groupItems"
+      :key="index"
+      class="group-item cursor-pointer"
+      @click="gotoDetail(item.url)"
+    >
       <div class="flex items-center">
         <!-- <el-icon :size='20' :color="item.color"><component :is="item.icon"></component></el-icon> -->
-        <span class="iconify" :data-icon="item.icon" data-width="24" :style="{color: item.color}"></span>
+        <span
+          class="iconify"
+          :data-icon="item.icon"
+          data-width="24"
+          :style="{ color: item.color }"
+        ></span>
         <span class="text-lg ml-2">{{ item.title }}</span>
       </div>
       <div class="text-regular">
@@ -52,7 +62,8 @@ const gotoDetail = (url: string) => {
 }
 .group-item {
   padding: 1em;
-  box-shadow: 1px 0 0 0 #f0f0f0, 0 1px 0 0 #f0f0f0, 1px 1px 0 0 #f0f0f0, 1px 0 0 0 #f0f0f0 inset, 0 1px 0 0 #f0f0f0 inset;
+  box-shadow: 1px 0 0 0 #f0f0f0, 0 1px 0 0 #f0f0f0, 1px 1px 0 0 #f0f0f0, 1px 0 0 0 #f0f0f0 inset,
+    0 1px 0 0 #f0f0f0 inset;
   transition: all 0.3s;
   box-sizing: border-box;
   flex-basis: 33.33333%;

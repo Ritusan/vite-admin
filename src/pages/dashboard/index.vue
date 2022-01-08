@@ -1,7 +1,7 @@
 <template>
   <div>
     <DashboardHeader />
-    
+
     <div class="lg:flex">
       <div class="lg:w-7/10 w-full !mr-4 enter-y">
         <ProjectCardVue />
@@ -17,10 +17,6 @@
 import DashboardHeader from './components/DashboardHeader.vue'
 import ProjectCardVue from './components/ProjectCard.vue'
 import QuickNav from './components/QuickNav.vue'
-
-
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

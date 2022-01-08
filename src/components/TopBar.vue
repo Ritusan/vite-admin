@@ -5,7 +5,10 @@
       <DArrowRight v-else />
     </el-icon>
     <div class="flex items-center">
-      <el-avatar size="default" src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar>
+      <el-avatar
+        size="default"
+        src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
+      ></el-avatar>
       <span class="pl-2">Akira</span>
       <el-dropdown>
         <el-icon class="ml-4" size="20"><setting /></el-icon>
@@ -35,7 +38,6 @@ const handleCollapse = () => {
   isCollapse.value = !isCollapse.value
   console.log(store)
 }
-
 </script>
 
 <style scoped></style>

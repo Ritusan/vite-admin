@@ -6,7 +6,7 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import WindiCSS from 'vite-plugin-windicss'
 import PurgeIcons from 'vite-plugin-purge-icons'
 
-const path = require("path")
+import * as path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({

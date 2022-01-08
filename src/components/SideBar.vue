@@ -1,6 +1,17 @@
 <template>
-  <el-aside style="background-color: rgb(238, 241, 246)" class="my-aside">
-    <el-menu default-active="2" class="my-menu" :collapse="isCollapse" @open="handleOpen" @close="handleClose" @select="selectItem" :collapse-transition="false">
+  <el-aside class="my-aside">
+    <el-menu
+      default-active="2"
+      class="my-menu"
+      :collapse="isCollapse"
+      @open="handleOpen"
+      @close="handleClose"
+      @select="selectItem"
+      :collapse-transition="false"
+      background-color="#7673b3"
+      text-color="#fdf0b6"
+      active-text-color="#f7c6bd"
+    >
       <el-menu-item index="0">
         <el-icon><coffee-cup /></el-icon>
         <template #title>首页</template>
@@ -78,7 +89,23 @@
 
 <script lang="ts" setup>
 import { ref, watch } from 'vue'
-import { Location, Document, Menu as IconMenu, Setting, CoffeeCup, MagicStick, Finished, Coin, PieChart, Calendar, Edit, Bell, MoonNight, Flag, Search } from '@element-plus/icons-vue'
+import {
+  Location,
+  Document,
+  Menu as IconMenu,
+  Setting,
+  CoffeeCup,
+  MagicStick,
+  Finished,
+  Coin,
+  PieChart,
+  Calendar,
+  Edit,
+  Bell,
+  MoonNight,
+  Flag,
+  Search,
+} from '@element-plus/icons-vue'
 import { useRouter } from 'vue-router'
 import { useStore } from 'vuex'
 
@@ -100,16 +127,16 @@ const selectItem = (val: string) => {
       break
     case '2-1':
       router.push('/colors/SpringColors')
-    break
+      break
     case '2-2':
       router.push('/colors/SummerColors')
-    break
+      break
     case '2-3':
       router.push('/colors/AutumnColors')
-    break
+      break
     case '2-4':
       router.push('/colors/WinterColors')
-    break
+      break
     case '3':
       router.push('/todolist')
       break
@@ -167,13 +194,20 @@ clientHeight.value = document.documentElement.clientHeight + 'px'
 .my-menu {
   height: v-bind(clientHeight);
 }
+:deep(.el-menu) {
+  box-sizing: content-box;
+}
 :deep(.el-menu):not(.el-menu--collapse) {
   width: 200px;
 }
 :deep(.el-menu.el-menu--collapse) {
   width: 60px;
 }
+:deep(.el-menu-item.is-active) {
+  background-color: #5e5c8f;
+}
 .my-aside {
   width: v-bind(sidebarWidth);
+  background-color: #7673b3;
 }
 </style>
