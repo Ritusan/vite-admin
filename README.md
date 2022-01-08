@@ -3,8 +3,6 @@
   <p>
     <img src="https://img.shields.io/github/languages/code-size/Ritusan/vite-admin" alt="code-size" />
     <img src="https://img.shields.io/github/package-json/dependency-version/Ritusan/vite-admin/vue?color=brightgreen" alt="dependency-version" />
-    <img src="https://img.shields.io/github/package-json/dependency-version/Ritusan/vite-admin/vite?color=brightgreen" alt="dependency-version" />
-    <img src="https://img.shields.io/github/package-json/dependency-version/Ritusan/vite-admin/typescript?color=brightgreen" alt="dependency-version" />
     <img src="https://img.shields.io/github/package-json/dependency-version/Ritusan/vite-admin/element-plus?color=brightgreen" alt="dependency-version" />
     <img src="https://img.shields.io/github/languages/count/Ritusan/vite-admin" alt="languages-count" />
     <img src="https://img.shields.io/github/languages/top/Ritusan/vite-admin?color=yellow" alt="languages-top" />
