@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, defineEmits } from 'vue'
+import { defineProps, defineEmits, PropType } from 'vue'
 import { SummerColors, SummerFestivalsColors } from './data'
 import { handleClipboard } from '@/utils/clipboard'
 
@@ -22,7 +22,7 @@ interface ColorItem {
 }
 const props = defineProps({
   colorList: {
-    type: Array,
+    type: Array as PropType <Array<ColorItem>>,
     required: true,
     default: () => [],
   },
