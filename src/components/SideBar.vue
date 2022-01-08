@@ -79,6 +79,13 @@
         <el-icon><flag /></el-icon>
         <template #title>Flag</template>
       </el-menu-item>
+      <el-menu-item index="11">
+        <!-- <el-icon><flag /></el-icon> -->
+        <el-icon>
+          <span class="iconify" data-icon="cib:about-me" data-width="18"></span>
+        </el-icon>
+        <template #title>关于</template>
+      </el-menu-item>
       <el-menu-item index="15">
         <el-icon><search /></el-icon>
         <template #title>外部页面</template>
@@ -160,6 +167,9 @@ const selectItem = (val: string) => {
       break
     case '10':
       router.push('/flag')
+      break
+    case '11':
+      router.push('/about')
       break
     case '15':
       router.push('/frame')

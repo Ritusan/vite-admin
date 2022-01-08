@@ -93,18 +93,4 @@ onMounted(() => {
     transform: translateX(280px);
   }
 }
-.Content-audit .contentLabel {
-  color: #333;
-  font-size: 12px;
-  background-color: #fee4b2;
-  width: 46px;
-  height: 22px;
-  position: absolute;
-  top: 0;
-  left: 10px;
-  text-align: center;
-  line-height: 22px;
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
 </style>

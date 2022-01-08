@@ -18,6 +18,7 @@ const write = () => import('../pages/write/index.vue')
 const notice = () => import('../pages/notice/index.vue')
 const weather = () => import('../pages/weather/index.vue')
 const flag = () => import('../pages/flag/index.vue')
+const about = () => import('../pages/about/index.vue')
 
 const routes: Array<RouteRecordRaw> = [
   { path: '/', redirect: '/dashboard' },
@@ -110,6 +111,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/flag',
     name: 'flag',
     component: flag,
+  },
+  {
+    path: '/about',
+    name: 'about',
+    component: about,
   },
 ]
 
