@@ -18,7 +18,7 @@
       </el-menu-item>
       <el-sub-menu index="1">
         <template #title>
-          <el-icon><magic-stick /></el-icon>
+          <el-icon><monitor /></el-icon>
           <span>工作台</span>
         </template>
         <el-menu-item-group>
@@ -80,11 +80,14 @@
         <template #title>Flag</template>
       </el-menu-item>
       <el-menu-item index="11">
-        <!-- <el-icon><flag /></el-icon> -->
         <el-icon>
           <span class="iconify" data-icon="cib:about-me" data-width="18"></span>
         </el-icon>
         <template #title>关于</template>
+      </el-menu-item>
+      <el-menu-item index="12">
+        <el-icon><magic-stick /></el-icon>
+        <template #title>动画效果</template>
       </el-menu-item>
       <el-menu-item index="15">
         <el-icon><search /></el-icon>
@@ -112,6 +115,7 @@ import {
   MoonNight,
   Flag,
   Search,
+  Monitor
 } from '@element-plus/icons-vue'
 import { useRouter } from 'vue-router'
 import { useStore } from 'vuex'
@@ -170,7 +174,10 @@ const selectItem = (val: string) => {
       break
     case '11':
       router.push('/about')
-      break
+      break 
+    case '12':
+      router.push('/animation')
+      break 
     case '15':
       router.push('/frame')
       break

@@ -1,8 +1,8 @@
 <template>
   <el-header class="flex items-center justify-between pl-2 pr-4">
-    <el-icon size="20" @click="handleCollapse" class="cursor-pointer">
-      <DArrowLeft v-if="!isCollapse" />
-      <DArrowRight v-else />
+    <el-icon size="20" @click="handleCollapse" class="cursor-pointer" color="#7673b3">
+      <Fold v-if="!isCollapse" />
+      <Expand v-else />
     </el-icon>
     <div class="flex items-center">
       <el-avatar
@@ -27,11 +27,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useStore } from 'vuex'
-import { DArrowLeft, DArrowRight, Setting } from '@element-plus/icons-vue'
+import { DArrowLeft, DArrowRight, Setting, Fold, Expand } from '@element-plus/icons-vue'
 
 const store = useStore()
 
-// let isCollapse = ref(store.state.sidebarIsCollapse)
 let isCollapse = ref(store.state.sidebarIsCollapse)
 const handleCollapse = () => {
   store.state.sidebarIsCollapse = !store.state.sidebarIsCollapse

@@ -19,6 +19,7 @@ const notice = () => import('../pages/notice/index.vue')
 const weather = () => import('../pages/weather/index.vue')
 const flag = () => import('../pages/flag/index.vue')
 const about = () => import('../pages/about/index.vue')
+const animation = () => import('../pages/animation/index.vue')
 
 const routes: Array<RouteRecordRaw> = [
   { path: '/', redirect: '/dashboard' },
@@ -116,6 +117,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/about',
     name: 'about',
     component: about,
+  },
+  {
+    path: '/animation',
+    name: 'animation',
+    component: animation,
   },
 ]
 
